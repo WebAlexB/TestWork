@@ -1,0 +1,12 @@
+.wp-admin #custom_product_data {
+    display: grid;
+    justify-content: space-around;
+    align-content: space-evenly;
+}
+
+.wp-admin .product-custom-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}

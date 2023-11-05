@@ -1,0 +1,14 @@
+# IDE
+.idea/*
+
+# Uploads
+wp-content/uploads/*
+wp-content/ai1wm-backups/*
+wp-content/cache/*
+
+wp-config.php
+
+php_errors.log
+.htpasswd
+sitemap.xml
+.htaccess

@@ -11,7 +11,7 @@ require_once 'configure/hooks/admin/product/product.php';
 require_once 'configure/hooks/connection/script.php';
 
 /**
- * Connection script in theme
+ *  product
  */
 require_once 'configure/hooks/frontend/product.php';
 

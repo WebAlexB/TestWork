@@ -8,7 +8,7 @@ get_header();
 
 <div class="form-add-product">
 	<h1><?php echo __( 'Add Product', 'storefront' ); ?></h1>
-	<form method="post" enctype="multipart/form-data">
+	<form class="product-form" method="post" enctype="multipart/form-data">
 		<div class="form-group">
 			<label for="product_title"><?php echo __( 'Product Title:', 'storefront' ); ?></label>
 			<input type="text" class="form-control" name="product_title" id="product_title" required>
@@ -73,7 +73,7 @@ get_header();
 			update_post_meta( $product_id, 'product_custom_type', $product_custom_type );
 			update_post_meta( $product_id, '_sku', $product_sku );
 		}
-		if ( ! empty( $_FILES['product_custom_image']['name'] ) ) {
+		if ( ! empty( $_FILES['product_custom_image']['name'] ) && isset( $_FILES['product_custom_image'] ) ) {
 			$upload_dir = wp_upload_dir();
 			$image_data = $_FILES['product_custom_image'];
 
@@ -94,6 +94,7 @@ get_header();
 			update_post_meta( $product_id, '_thumbnail_id', $attachment_id );
 			update_post_meta( $product_id, 'product_custom_image', $upload_dir['url'] . '/' . $file_name );
 		}
+		echo '<script type="text/javascript">document.body.classList.add("product-added");</script>';
 	}
 	?>
 </div>
